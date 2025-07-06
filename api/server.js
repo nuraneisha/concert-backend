@@ -2,12 +2,12 @@
 const express = require("express");
 const puppeteer = require("puppeteer");
 const cors = require("cors");
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
 
 const app = express();
 app.use(cors());
 const PORT = 3000;
-dotenv.config();
+// dotenv.config();
 
 app.get("/kuala-lumpur", async (req, res) => {
     try {
@@ -18,7 +18,7 @@ app.get("/kuala-lumpur", async (req, res) => {
 
         const page = await browser.newPage();
 
-        const url = process.env.SCRAPPER;
+        const url = "https:www.bandsintown.com/c/kuala-lumpur-malaysia?came_from=253&sort_by_filter=Number+of+RSVPs&concerts=true";
         await page.goto(url, {
             waitUntil: "networkidle2",
             timeout: 60000,
