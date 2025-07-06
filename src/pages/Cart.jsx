@@ -9,7 +9,7 @@ export default function Cart() {
     // Fetch cart items on mount or user change
     useEffect(() => {
         if (currentUser) {
-            fetch(`http://localhost:3001/cart/${currentUser.uid}`)
+            fetch(`/api/cart/${currentUser.uid}`)
                 .then(res => res.json())
                 .then(data => {
                     setCartItems(data);
@@ -27,7 +27,7 @@ export default function Cart() {
         }
 
         try {
-            const res = await fetch(`http://localhost:3001/cart/${currentUser.uid}/update`, {
+            const res = await fetch(`/api/cart/${currentUser.uid}/update`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ itemId, quantity: newQty })
@@ -42,7 +42,7 @@ export default function Cart() {
     // Delete item
     const deleteItem = async (itemId) => {
         try {
-            const res = await fetch(`http://localhost:3001/cart/${currentUser.uid}/delete/${itemId}`, {
+            const res = await fetch(`/api/cart/${currentUser.uid}/delete/${itemId}`, {
                 method: "DELETE"
             });
             const data = await res.json();
@@ -55,7 +55,7 @@ export default function Cart() {
     // Checkout
     const handleCheckout = async () => {
         try {
-            const res = await fetch(`http://localhost:3001/cart/${currentUser.uid}/checkout`, {
+            const res = await fetch(`/api/cart/${currentUser.uid}/checkout`, {
                 method: "POST"
             });
             const data = await res.json();

@@ -19,7 +19,7 @@ export default function Layout() {
         const fetchCartCount = async () => {
             if (currentUser) {
                 try {
-                    const res = await fetch(`http://localhost:3001/cart/${currentUser.uid}/count`);
+                    const res = await fetch(`/api/cart/${currentUser.uid}/count`);
                     const data = await res.json();
                     setCartCount(data.count || 0);
                 } catch (error) {

@@ -18,7 +18,7 @@ export default function Tickets() {
             price,
         };
 
-        const res = await fetch("http://localhost:3001/cart", {
+        const res = await fetch("/api/cart", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(body),

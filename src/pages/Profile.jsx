@@ -10,7 +10,7 @@ export default function Profile() {
         const fetchHistory = async () => {
             if (currentUser) {
                 try {
-                    const res = await fetch(`http://localhost:3001/history/${currentUser.uid}`);
+                    const res = await fetch(`/api/history/${currentUser.uid}`);
                     console.log(`${currentUser.uid}`)
                     const data = await res.json();
                     setTickets(Array.isArray(data) ? data : []);
@@ -28,7 +28,7 @@ export default function Profile() {
 
     const handleDelete = async (id) => {
         try {
-            await fetch(`http://localhost:3001/history/${id}`, { method: "DELETE" });
+            await fetch(`/api/history/${id}`, { method: "DELETE" });
             setTickets(tickets.filter(ticket => ticket.id !== id));
         } catch (err) {
             console.error("Delete error:", err);

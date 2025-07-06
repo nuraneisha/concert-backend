@@ -1,0 +1,12 @@
+{
+  "name": "concert-backend-assesment",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "pg": "^8.11.1",
+    "dotenv": "^17.0.1"
+  }
+}
