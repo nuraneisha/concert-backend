@@ -1,0 +1,20 @@
+.lunachella-navbar {
+    background-color: #1E1B2E;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #8B5CF6;
+}
+
+.lunachella-navbar .nav-link {
+    color: #F5F3FF;
+    transition: color 0.3s ease;
+}
+
+.lunachella-navbar .nav-link:hover {
+    color: #F472B6;
+}
+
+.lunachella-navbar .navbar-brand {
+    font-weight: bold;
+    color: #E0E7FF;
+    cursor: pointer;
+}

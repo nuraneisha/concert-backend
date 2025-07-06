@@ -1,0 +1,47 @@
+.Footer {
+    background-color: #1E1B2E;
+    /* dark indigo */
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #8B5CF6;
+    /* moon purple border */
+}
+
+.Footer .nav-link {
+    color: #F5F3FF;
+    /* moonlight white */
+    transition: color 0.3s ease;
+}
+
+.Footer .nav-link:hover {
+    color: #F472B6;
+    /* dreamy pink */
+}
+
+.Footer .navbar-brand {
+    font-weight: bold;
+    color: #E0E7FF;
+}
+
+.Footer h4 {
+    color: white;
+}
+
+.footer-icon {
+    color: #F5F3FF;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.footer-icon:hover {
+    color: #8B5CF6;
+}
+
+.footer-link {
+    color: #F5F3FF;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.footer-link:hover {
+    color: #8B5CF6;
+}
